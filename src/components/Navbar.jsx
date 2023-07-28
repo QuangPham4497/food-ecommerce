@@ -7,7 +7,7 @@ import Image from "next/image";
 const links = [
   { id: 1, title: "Homepage", url: "/" },
   { id: 2, title: "Menu", url: "/menu" },
-  { id: 3, title: "Working Hours", url: "/" },
+  { id: 3, title: "Working Hours", url: "/workinghour" },
   { id: 4, title: "Contact", url: "/" },
 ];
 
@@ -41,9 +41,13 @@ const Navbar = () => {
           <span>123 456 78</span>
         </div>
         {!user ? (
-          <Link href="/login">Login</Link>
+          <Link href="/login" className="hover:bg-slate-300">
+            Login
+          </Link>
         ) : (
-          <Link href="/orders">Orders</Link>
+          <Link href="/orders" className="hover:bg-slate-300">
+            Orders
+          </Link>
         )}
         <CartIcon />
       </div>
